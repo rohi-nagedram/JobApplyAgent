@@ -1,0 +1,72 @@
+{
+  "personal": {
+    "full_name": "Bathini Rohini",
+    "first_name": "Rohini",
+    "last_name": "Bathini",
+    "email": "EDIT_ME",
+    "phone": "EDIT_ME",
+    "location": "Telangana, India",
+    "linkedin": "https://linkedin.com/in/bathini-rohini-21b44a380",
+    "github": "https://github.com/rohi-nagedram"
+  },
+  "education": {
+    "degree": "B.Tech in Computer Science and Engineering",
+    "college": "Priyadarshini Institute of Science & Technology for Women",
+    "graduation_year": 2026,
+    "cgpa": "EDIT_ME"
+  },
+  "summary": "2026 B.Tech CSE graduate with project experience in Python backend APIs, AI-enabled applications, REST services and workflow automation.",
+  "skills": [
+    "Python",
+    "Java (basic)",
+    "SQL",
+    "HTML",
+    "CSS",
+    "FastAPI",
+    "REST APIs",
+    "Supabase",
+    "PostgreSQL",
+    "Git",
+    "GitHub",
+    "n8n",
+    "Linux",
+    "Testing",
+    "Debugging",
+    "OOP",
+    "Data Structures and Algorithms"
+  ],
+  "projects": [
+    {
+      "name": "LectureLens",
+      "description": "Converts PDF and YouTube learning material into flashcards and MCQs using LLM APIs; deployed on Render."
+    },
+    {
+      "name": "ContractGuard",
+      "description": "Contract review tool focused on freelancer contracts."
+    },
+    {
+      "name": "MedScript AI",
+      "description": "Voice-to-SOAP-note prototype using Whisper and Groq."
+    },
+    {
+      "name": "DuoAudit",
+      "description": "GitLab merge-request security analyzer."
+    },
+    {
+      "name": "Pickpocket Detection",
+      "description": "Academic machine-learning project."
+    }
+  ],
+  "certifications": [
+    "C, HTML and CSS (Sololearn)",
+    "Code Vipassana Season 13"
+  ],
+  "experience": [
+    {
+      "title": "Independent Web Development & Automation Projects",
+      "company": "Self-directed",
+      "dates": "EDIT_ME",
+      "description": "Describe only client work actually delivered; edit or remove this entry if inaccurate."
+    }
+  ]
+}
