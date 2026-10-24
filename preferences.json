@@ -1,0 +1,48 @@
+{
+  "target_graduation_year": 2026,
+  "priority_company_type": "product-based",
+  "location_priority": [
+    "India-eligible remote",
+    "Hyderabad, India",
+    "Bengaluru, India"
+  ],
+  "allowed_non_remote_cities": [
+    "hyderabad",
+    "bengaluru",
+    "bangalore"
+  ],
+  "remote_must_be_india_eligible": true,
+  "target_job_families": [
+    "software engineer",
+    "software developer",
+    "backend engineer",
+    "backend developer",
+    "python developer",
+    "qa engineer",
+    "test automation",
+    "automation engineer",
+    "graduate engineer trainee",
+    "associate software engineer",
+    "junior developer",
+    "site reliability engineer",
+    "devops engineer",
+    "data engineer"
+  ],
+  "excluded_job_families": [
+    "technical service",
+    "technical account manager",
+    "customer support",
+    "sales",
+    "fraud operations",
+    "program manager",
+    "brand insights",
+    "research scientist",
+    "network security",
+    "offensive security",
+    "product manager",
+    "intermediate",
+    "professional services",
+    "account manager",
+    "engagement manager"
+  ]
+}
