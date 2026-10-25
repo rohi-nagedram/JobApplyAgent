@@ -2,7 +2,7 @@
   "target_graduation_year": 2026,
   "priority_company_type": "product-based",
   "require_full_time": true,
-  "max_required_min_experience_years": 0,
+  "max_required_min_experience_years": 1,
   "location_priority": [
     "India-eligible remote",
     "Hyderabad, India",
