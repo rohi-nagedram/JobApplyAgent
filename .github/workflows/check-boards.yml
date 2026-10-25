@@ -1,0 +1,63 @@
+import json, urllib.request, urllib.error
+from concurrent.futures import ThreadPoolExecutor
+
+GH = """databricks stripe cloudflare gitlab mongodb elastic twilio okta nutanix rubrik sprinklr postman
+razorpaysoftwareprivatelimited groww cred meesho phonepe freshworks zeta chargebee juspay browserstack inmobi
+uber intuit adobe samsara coinbase airbnb dropbox figma datadog anthropic discord pinterest lyft robinhood
+atlassian zscaler fivetran confluent hashicorp pagerduty newrelic splunk toast gitlab asana airtable
+amplitude mixpanel segment grammarly duolingo reddit roblox unity epicgames riotgames nvidia
+thoughtworks appsflyer clevertap moengage hevodata whatfix zenoti sharechat dailyhunt mpl dream11
+paytm cleartax slice jupitermoney khatabook cars24 spinny upgrad unacademy vedantu byjus pocketfm
+swiggy zomato ola flipkart myntra nykaa lenskart urbancompany delhivery shadowfax rapido
+tekion zoho hasura tessell lightspeedhq thoughtspot vmware nutanix commvault druva cohesity pure-storage
+walmartglobaltech target-india wayfair etsy shopify twitch instacart doordash gusto brex ramp mercury
+""".split()
+LV = """cred groww meesho paytm zeta phonepe razorpay slice jupiter khatabook cars24 spinny upgrad
+postman freshworks netflix palantir plaid wealthfront affirm zapier gusto flexport sourcegraph
+whoop ebay mistral shieldai attentive kraken blockchain-com eightfold highspot
+sharechat dream11 mpl nobroker udaan zepto dunzo swiggy rapido ather ultrahuman
+""".split()
+
+INDIA = ["hyderabad", "bengaluru", "bangalore", "india"]
+
+
+def get(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def check(item):
+    kind, slug = item
+    try:
+        if kind == "greenhouse":
+            data = get(f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs")
+            locs = [((j.get("location") or {}).get("name") or "").lower() for j in data.get("jobs", [])]
+        else:
+            data = get(f"https://api.lever.co/v0/postings/{slug}?mode=json")
+            locs = [((j.get("categories") or {}).get("location") or "").lower() for j in data]
+        n = sum(1 for l in locs if any(k in l for k in INDIA))
+        return kind, slug, len(locs), n, ""
+    except urllib.error.HTTPError as e:
+        return kind, slug, -1, 0, f"HTTP {e.code}"
+    except Exception as e:
+        return kind, slug, -1, 0, type(e).__name__
+
+
+def main():
+    items = [("greenhouse", s) for s in dict.fromkeys(GH)] + [("lever", s) for s in dict.fromkeys(LV)]
+    with ThreadPoolExecutor(12) as ex:
+        res = list(ex.map(check, items))
+    ok = sorted([r for r in res if r[2] >= 0], key=lambda r: -r[3])
+    print("WORKING BOARDS (source, name, total jobs, India jobs):")
+    for k, s, t, n, _ in ok:
+        print(f"  {k:10} {s:32} total={t:5} india={n}")
+    print("\nWORKING WITH 1+ INDIA JOBS (copy these into boards.json):")
+    print("  greenhouse:", [s for k, s, t, n, _ in ok if k == "greenhouse" and n > 0])
+    print("  lever:     ", [s for k, s, t, n, _ in ok if k == "lever" and n > 0])
+    print(f"\n{len(ok)} working, {len(res) - len(ok)} not found.")
+
+
+if __name__ == "__main__":
+    main()
+    
