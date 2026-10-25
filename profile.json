@@ -1,0 +1,77 @@
+{
+  "personal": {
+    "full_name": "Bathini Rohini",
+    "location": "Telangana, India",
+    "email": "bathinirohini61@gmail.com",
+    "phone": "+91 7836324971",
+    "linkedin": "linkedin.com/in/bathini-rohini-21b44a380",
+    "github": "github.com/rohi-nagedram"
+  },
+  "summary": "Entry-level Software Engineer (B.Tech CSE, 2026) who builds and ships AI-driven backend systems end to end: voice and speech pipelines, LLM-powered workflows, REST APIs and third-party integrations. Experienced in making automated systems reliable in production with retries, logging, quality gates and scheduled runs. Strong in Python, debugging and fast iteration; comfortable owning features from idea to deployment.",
+  "skills": [
+    "Python", "Java", "SQL", "HTML", "CSS",
+    "FastAPI", "REST APIs", "OAuth2", "YouTube Data API", "Groq", "LLM APIs", "webhooks", "n8n",
+    "Whisper", "edge-TTS", "prompt design", "agentic workflows",
+    "Supabase", "PostgreSQL", "Render", "Railway", "Git", "GitHub", "Linux", "cron", "FFmpeg",
+    "OOP", "data structures", "algorithms", "debugging", "error handling", "logging"
+  ],
+  "projects": [
+    {
+      "name": "AI Voice Calling Agent — Outbound Lead Qualification",
+      "short_name": "an AI voice calling agent",
+      "keywords": ["voice", "speech", "phone", "call", "conversation", "llm", "lead", "agent", "automation"],
+      "description": "- Designed the conversation flow for an automated phone agent: identify the decision-maker, check for an existing website, pitch, handle objections, qualify the lead and close politely.\n- Specified per-call logging (status, transcript, summary, objections, lead score, follow-up and callback info) plus no-answer/busy handling, duplicate-call prevention and start/pause/resume/stop controls."
+    },
+    {
+      "name": "MedScript AI — Voice-to-SOAP Notes (BluePrint 2026 Hackathon)",
+      "short_name": "MedScript AI",
+      "keywords": ["whisper", "speech", "groq", "llm", "nlp", "transcription", "healthcare", "voice", "python"],
+      "description": "- Built a speech-to-structured-text pipeline using Whisper and the Groq API that turns recorded conversations into SOAP clinical notes.\n- Delivered a complete hackathon submission with demo script and presentation deck."
+    },
+    {
+      "name": "Automated YouTube Shorts Pipeline (Python, Groq, edge-TTS, FFmpeg)",
+      "short_name": "an automated YouTube Shorts pipeline",
+      "keywords": ["python", "groq", "tts", "ffmpeg", "youtube", "oauth", "cron", "automation", "pipeline", "api", "retry", "logging", "scheduled", "reliability"],
+      "description": "- Built a fully automated pipeline: LLM script generation, text-to-speech, footage retrieval, FFmpeg assembly and upload via YouTube Data API with OAuth2, scheduled daily with cron.\n- Hardened it for reliability: retry and timeout logic on API and network failures, a quality gate that blocks bad output, duplicate-topic detection, and a pipeline log for debugging.\n- Diagnosed and fixed production issues such as API title-length errors, expiring OAuth tokens, stale-file bugs and mismatched media."
+    },
+    {
+      "name": "LectureLens (Binary Bounty Hackathon)",
+      "short_name": "LectureLens",
+      "keywords": ["llm", "pdf", "api", "deployed", "render", "education", "python", "flashcards"],
+      "description": "- Converts PDF and YouTube content into flashcards and MCQs with LLM APIs; deployed live on Render."
+    },
+    {
+      "name": "ContractGuard (MeDo Hackathon)",
+      "short_name": "ContractGuard",
+      "keywords": ["contract", "legal", "risk", "llm", "api", "text analysis", "web", "python"],
+      "description": "- India-specific tool that helps freelancers spot risky contract clauses; published live."
+    },
+    {
+      "name": "DuoAudit — AI Merge Request Security Analyzer",
+      "short_name": "DuoAudit",
+      "keywords": ["security", "gitlab", "merge request", "code review", "ai", "devops", "git", "ci"],
+      "description": "- Built an AI-powered reviewer that analyzes GitLab merge requests for security issues using GitLab AI."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Freelance Web Developer",
+      "org": "Self-employed",
+      "bullets": [
+        "Build and deploy websites for local and international clients, owning requirements, development and delivery.",
+        "Create internal automations with Python and n8n to cut manual work."
+      ]
+    }
+  ],
+  "education": {
+    "degree": "B.Tech, Computer Science & Engineering",
+    "degree_short": "B.Tech CSE",
+    "college": "Priyadarshini Institute of Science & Technology",
+    "graduation_year": 2026
+  },
+  "achievements": [
+    "Selected by OpenAI & NextWave to present an AI-based solution at a State-Level Buildathon (2025).",
+    "Multiple hackathon submissions: Binary Bounty, MeDo, BluePrint 2026, The Synthesis, PL_Genesis."
+  ],
+  "certifications": []
+}
