@@ -1,0 +1,10 @@
+{
+  "greenhouse_board_tokens": ["stripe", "figma", "datadog", "cloudflare", "notion", "discord", "reddit", "roblox", "duolingo", "plaid", "mongodb", "asana", "webflow", "brex", "ramp", "rippling", "scaleai", "anthropic", "openai", "airbnb", "dropbox", "coinbase", "hubspot", "gitlab", "linear"],
+  "lever_sites": ["atlassian", "netlify", "postman", "retool", "sourcegraph", "zapier", "affirm", "flexport", "gusto", "mixpanel", "samsara", "twitch", "vercel"],
+  "ashby_board_names": ["PostHog", "Ramp", "Linear", "Vercel", "Supabase", "LangChain", "Modal", "Perplexity", "ElevenLabs", "Browserbase"],
+  "enable_remotive": true,
+  "enable_jobicy": true,
+  "enable_remoteok": true,
+  "enable_wwr": true,
+  "note": "Public listing feeds and configured ATS boards only. Add verified company board names to expand coverage. Remote eligibility must be verified in the original posting."
+}
