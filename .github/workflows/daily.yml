@@ -1,0 +1,32 @@
+
+name: Daily Job Search and Resume Drafts
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 2 * * *"
+permissions:
+  contents: read
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python run.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: job-application-review-${{ github.run_number }}
+          path: |
+            data/jobs.csv
+            data/jobs.json
+            data/excluded_jobs.csv
+            data/source-errors.txt
+            data/approval_queue.json
+            data/applications.csv
+            data/prepared/
+          if-no-files-found: warn
+          retention-days: 30
+          
